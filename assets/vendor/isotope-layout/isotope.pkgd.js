@@ -506,580 +506,392 @@ return getSize;
       return 'matches';
     }
     // check un-prefixed
-    if ( ElemProto.matchesSelector ) {
-      return 'matchesSelector';
-    }
-    // check vendor prefixes
-    var prefixes = [ 'webkit', 'moz', 'ms', 'o' ];
+   !y" (†ELamPrmÙo/matgbesSdnecÙgz ) {
+0  !``retın 'ËatfhesSehgctor/{*  ` }    '- check vundor tÛufaxes
+ †  vab p2%fixos Ω Z 'wÂ¬kit.0&i|˙' 'ms', 7Ô' };
+
+  0fes (@tar È=03i!< pr%fi8as&Ã^gth; È´+`) {+0    (Var prgbix - pzefixew[i];M
+   0  vaZ -ethOD = prefkh + %MavahesSEL%cdor'
+† !  0ib ( EhemQrotmZ mÂthgd \ ) {/
+††"    (reEuro eeehod9
+ †$  0y
+"   }
+  }i();
+Ç  reuurn(fUnathmnama}c*esselector(`eleo, relecpor(+®{	
+  0 reterj elem{ }auchesMavhgd ]("3a|ecdmr 	;
+, }:
 
-    for ( var i=0; i < prefixes.length; i++ ) {
-      var prefix = prefixes[i];
-      var method = prefix + 'MatchesSelector';
-      if ( ElemProto[ method ] ) {
-        return method;
-      }
-    }
-  })();
-
-  return function matchesSelector( elem, selector ) {
-    return elem[ matchesMethod ]( selector );
-  };
-
-}));
-
+}©(;
+
 /**
- * Fizzy UI utils v2.0.7
- * MIT license
- */
+ * Dij¯y UI ut}lq v20.7
+ *!MIT license
+ *//*js,ij4 kzowsar: urwm, ’ndgg: tRuE. unused: t2qÂ, {tvicvz 4v5u†*?Õ
 
-/*jshint browser: true, undef: true, unused: true, strict: true */
+( funcpion( windw,†vaÍdry )¶{
+  +/ ulaversAl!mogule ddfiL)tiol=
+  /*jshinÙ s|r)cu: fals% +-`/*wlobalw defyl}, mo`5la,†rgpwMse */ç
+  if$(0typeod define"== 'fuÓs¸iÔj' 2&$defi.m.amD ) {%  †./1EOL
+    defin%( 'fjzzy-ui®utalw/qpils'._	
+  ( 8$'dusi.lrm-ma|!hes-Celec|op/eadchE2-sdlectg2/
+ " "].†fqnctioj8 ma4ch‰2WelectOr ) {
+      sepern faBtory( w©ndow¨ l¡fchesSelectgr i{
+    });	
+  } ense(if`( vixeoÔ modele0=>b'mbjecd'`'& yo‰u|e.e|pjRts§) {  $0 / C-monJS	
+  `†oÔdulE.uxpkr|s#= nac|o2yh
+†   $°windNw(
+   "`vequir%8'‰esa/tbo-match$s-selectgRg)-0 $ );J "˝ ulse0{
+" ` // browser globAl
+   0wizDow,Fez|y’IUtils = fa‚por9(
+0 !   whndowl
+     wkn$ownm`tchesQahAA4or
+†0 0);
+  
+}( wi.‰o◊, fµnctyof f·ctory(†win‰ow/0ÌatchesSelEc}or 	 [
 
-( function( window, factory ) {
-  // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
 
-  if ( typeof define == 'function' && define.amd ) {
-    // AMD
-    define( 'fizzy-ui-utils/utils',[
-      'desandro-matches-selector/matches-selector'
-    ], function( matchesSelector ) {
-      return factory( window, matchesSelector );
-    });
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('desandro-matches-selector')
-    );
-  } else {
-    // browser global
-    window.fizzyUIUtils = factory(
-      window,
-      window.matchesSelector
-    );
+
+6qr tiLs`5 {};-äJ// --≠-- eXde~D ----- /
+
+// dxtmnds O"ka√$s
+t4iÏs.mxtend = funCtino( a,$g ) kä$"fov#Ë$v`r xrop`iÔ b ) k
+    aY†`/q ]"= fI prop!\9
   }
+ "retu3o!a;
+};
+// ----≠$mkauho ----) /&M
 
-}( window, function factory( window, matchesSelector ) {
+uTils.lolud = dunctioj( ntm- div ) {  re4urn ( ( num d"div © + div )(% dmw;
+={L
+Ø/ -=--- maoeA~Úax ))-- /Ô*JvAr ibraQQlicE <"Array/Protot}pe.slmce;
 
+?/ t}rn element or nÔfeList anuk aŒba˙ray(etals.makeAsrayÄ= function cj )"kç
+  ig†(0 rtay<ir¡rbayh ob: )) {
+$ 00./0˜{a Ôbjeku0if already"an!arra}
+  $!vdtUrÓ mbj;*0`}  // retu‚n ampty0asPiy ib`un`Efi~el!oV jull/h#6
+  hd$( obj$}=? null }p obj!=Ω= ı~ddfinef )%{
+    return![O;
+0 uJ!0var i#SrAyNike = thpeof Ícj`5= 'ÔbKEc4ß &2$ty0Âof obj.lqJÁth 9= 'nwmbEr';
+  if$(†HsArr·yiÎÂ†) s
+  † ø+"cÔovarp$nodeList!to ·rrqy  80betern ar2&iS,ice.cal,($obJ (+
+  y
+ $/%arz·y of siLgle ifdex
+  v%dwr~ € obj ];};-
+,// %-≠-- ÚemoveFro, ---/%0//
 
-
-var utils = {};
-
-// ----- extend ----- //
-
-// extends objects
-utils.extend = function( a, b ) {
-  for ( var prop in b ) {
-    a[ prop ] = b[ prop ];
-  }
-  return a;
-};
-
-// ----- modulo ----- //
-
-utils.modulo = function( num, div ) {
-  return ( ( num % div ) + div ) % div;
-};
-
-// ----- makeArray ----- //
-
-var arraySlice = Array.prototype.slice;
-
-// turn element or nodeList into an array
-utils.makeArray = function( obj ) {
-  if ( Array.isArray( obj ) ) {
-    // use object if already an array
-    return obj;
-  }
-  // return empty array if undefined or null. #6
-  if ( obj === null || obj === undefined ) {
-    return [];
-  }
-
-  var isArrayLike = typeof obj == 'object' && typeof obj.length == 'number';
-  if ( isArrayLike ) {
-    // convert nodeList to array
-    return arraySlice.call( obj );
-  }
-
-  // array of single index
-  return [ obj ];
-};
-
-// ----- removeFrom ----- //
-
-utils.removeFrom = function( ary, obj ) {
-  var index = ary.indexOf( obj );
-  if ( index != -1 ) {
-    ary.splice( index, 1 );
+Utils&rdmoveNso- = btnction, er¯,†obk() {
+ !var inde8 = ary>infexOf® ´bÍ );( if0( i~DÂ8"!=!-± ! M
+`†  ary.sp,i√m, iÓ‰axl 1 ):
   }
 };
+*/ ----- g!tPavend$----- //ä
+u|il£.GetQaseOt0= fun#vig.  elemh saDaatO2 )({
+% riile ( elDe.p`rtnuNode &. eleo†!=(dbumelt.kody )‡y $  elqm  ema}.paren4Noee;
+ †  if)( Ma|gHeSSe|dctor( elem™ selector0)`) ;
+     `ReÙubn %hdm;J  ( }
+ "}
+=;
 
-// ----- getParent ----- //
+/ ≠----"fetQ5eryDleMent -)--- //
+MJ//5se0Ememe%t !s selectgr0string
+ui|c.'etSuErxGleoent =$&unCthof®$eÃAm 9 {
+  if (†t}pmof!elmm Ω-&'strinw' )!{
+    return tocum%nt.1UerySDlectkr elam )?M
+  }ç  rÂtUrn eldm:
+]3
 
-utils.getParent = function( elem, selector ) {
-  while ( elem.parentNode && elem != document.body ) {
-    elem = elem.parentNode;
-    if ( matchesSelector( elem, selector ) ) {
-      return elem;
-    }
-  }
+// -)--- hAndlgEvenT ≠(-- //è
+	
+// enable .oNTy`e 4k |v)gg%Ú from .qddEventLasTefur( elem, ßtype/ -*utils.hel‰DeE~env = vujcTikÓ( e~ent (${
+  var eetËof - &Ong + evtnt.tyXe?  if†( thkc[ }etHÔd Y ) {
+@  0thlsZ meuhod ]( gvun| ,{††]
+};
+/ ----0f!lTevFindElg}e/dÛ =---m k.
+äu|y|q.filterGi~da|eoelts =0bunctiol* elem3, sel%ctor†) s
+  // maje erray$Of ele-s
+  ememÛ#} udims.MakaArz!y(†glems ); 0Var(nfMdeÌs!= Z_9
+ç
+  elems&ForEaÎË( Êu~„t+Ó( elem )0y
+"  0/. cleck"txat el%m$iq an†actual el%meo4
+    iv ("!( elei mnruaoceof HTMLEndMent ( )!s
+      retUvn;-  0®}
+  " ?/!q`l`dnem )& no(se,mct+p
+    if ( !su¨e'tor ) {"  $   vfelems.quÛil ÌLem i;J"$   `reuurn;ö"   }
+$`  / vilfer f fand itemu"if ˜e"Have a calastkr
+ †0 /Ø(Filtur
+  `$iv ( ma4chesSÂlegto2) elem( selektop )$)0{Ö
+ 0    ffElems.pısh(†}nem +;äh " }
+`$  -? vÈ|d chiÌlzenE
+0   vab chi<d≈lwÌs < ulem.yeerySeleavorAll( cemmctmr i˚
+ d( //(bÔncat$ch˘ldElÂmr"Ùn filtebFoUld∞·2rayç
+ 0  vkp((0var∞È=¥; i (ÁhihdElmms.lejguh9 i++ ) _ä (  ! vFDnems.xush8 childElems[i]`!-
+  ` } "});0 zet=zÓ(ffAlams;
+˝;
+/+ ---- eecounkeEetjod(----mb//
+
+util{.debou.ceMefhod ="Êunctio.(`_cÏass,!me0hodNamd< Ùhrev`olt )"[
+  thÚdÛlond = vhresholp`¸| !00;ä o/ original0mEthmlç †vaz*m·txmf = _cmaÛs.prottype[ gethoDName!];çJ  va{adimeoudOa}e =ametl{l^eme + T)mek5t';Mä
+  _clacÛ.pbntoty2E[ methodN·oe0]$= Êtnktiknh! ?	
+    var tymgkwt =`this[ timeoeuNale E;    cleerTylefut( timuoutÄ);	 *  !4p!r asgs°= `rgummots;
+    va“ Ot@iÛ = dhig;ä    this["timeoutname ] 5 sdTTimeout functmon() {ç
+      eethod.applyh _this, a2gs )?
+   "80‰elete dhis[!tiiegutName`›3
+4  u, ‰hr!slll ·;
+`0};
+5;
+
+// -<-m-$docREiey -=--- o/
+tÙkls.d/cRe!dX = funct)oo(!cellbac{ ´ ˚Î 4vav r5adyRt!te"= dmcwmaÓt.readyS0`te:ä  )f ( v‰adyStatu -= gcomplete'0x| 2g·diSvate0<; 'iˇturacpÈve6 )0{
+  ` //$do asyÓc(to$allow$dor odhdp ssrmppc to r}n"metaFIzzx/fli„kipy#4~qMä( ( ÛitTile~u4(0caËmbac{():
+ 1= elcd!{Ç0   tocımunt&adeˆenÙListenerh 'DOMCont'lvLoadgd#"callback );
+$ }
+;
+
+'. m--=- HÙelIlht -/--% /+
+?+ hptt:/'jamesrobÂÚtq*name/Blog"0±1/ 2'2/striLg-functionr-noÚ,javA3cript-trim-to-calgÏ-c!se≠5o-daq(gd-AÓd-to-ufddrscose?-
+uuils&toLash5d = bunction( svb ) {I
+$ re|urn stb.re0,Ace(0/(.	([Q=Z8/G- funcwÈn"%mataH, $1, $: ) {
+  ` repupn $3 + '-' +  ≤;ä% }).tnågVerAre(-;
+};
+6ar colsOlg = windw>s/n3ole;
+/*. *!alo7 useÚ do initialÈze sl·ss%s!via†Sdiıa-l·mesp!ce] or $~3≠namerpace cla3s
+ 
+!xmlCnht(!Widc't,†'Ga‰eetûaue' 	 * Ôptions !rd†Òarsel frÔh data<jame3pa„e,n0tioÓs	 *-5dmlc.ËtmlInit$= f5ng$ion( WidgÂtCÏass( na-E3xace i {
+  }r)s.ÊocZeadi( &tfstioo*© {*  ` war`earhmd^aÈgsp·ce - ut)ls.toDdshdd,†na|Ìspaae`)
+    var eadiQÙtr 5 'dati-' + daShGfNammspqke;
+    var dataA|trEl%os = dksue~tnaeeryS%lecuo"All(0'Z' + daÙaAt|r +"g]& )*	$ 4 vqr *sDashElemw - eocumenÙ,ıuer{QelectorA|l( '.js-'0+ dËqhedNaÌes8aCe );
+    vsr°emEm3 =(ut)|s.m¡{eArra}("dataA4vrELems i-
+`     &CoÓ'ad( uu)lsnakeArÚax,"nzDarhDlems ) i{
+†   v`r datqOpti/n{Av4R = d%|aAttb$) '-or4iofs&9    vaÚ"jSuery = windoo.jquevy;
+
+   elems.&orEach(!nqnbtK/f( umem")(? `    var`attr0= glem.gÂtITtributd( dat`Au‘r") ||
+     $  eLem.getAttribudm( ditaOrtiÔnsCtur");M      vas op|inns;
+†    !u2}0{
+   ∞$  !opdjofs†= aÙtr && bSON.paRsa( attr!);      } cat√h`∏ epror ) {M
+(!    ` //*lÔ' mzror, do not†)nitia$ixeM
+   00   if ® konsole +§{
+$    $(   cons/le.ezror("'Errov parsinf ' /†da4aCttr"+ '$o~"ß #†Eme->className!+* ! $†( $ ' ' + evsÔr0);ù
+ (      y
+  !!    revern;
+!    `}
+  !"  //0in)tiidÈ^e
+     `var in≥<ence } few Gid'etBlass($el%m,°optimns );
+   † //)oaKe"evaile"le†via  (+.4ata(#namusPace')
+  $  (if ( jQuury ) ˚ç
+` !     JQuarx.fa·( m,em, namesPacE, in{‰aÓce0);
+ 0    }J( 0 });
+
+  |);
+};
+//0,≠-%-  ----, //
+
+ZeTuro"utilq;M
+J}));
+
+'*
+* * _tdeayep Item */
+
+( feÓgdion windog, fActorq + {
+ †// unkvmvsaÏ$Modqme tebin`ti/n
+` /* *sh+jt strigt* ÊCdÛe */ /+ g|obaLÛ!defioe."module, Reqea2%`*/
+0 iF ) typeob defi.e†== 'funcpion3 '& ‰efYn%.Am` ) {
+ !  /+ AMD - rÂpuireHS
+  0 `eFIne*$'ouvnequB/it%m'l[
+  h  †!`'ev-eMittDp/ermÂmitTes',$  * `†0'GeT-size'gep-{iza'K  d Ä ],N` ∞   bactory
+0   i9
+" } e,we if , tqPeÔf MÔeule =- 'j‚ject' && module>expmrts ) 
+    // GmmMonJS ) B2o{erif˘$ We"paCk
+  ! =odule+ehpop|c$"v!kpmrY(
+      zep5ize('ef,emi4t!r),     pequiÚe('det)size%)ç
+    	{
+  y e|qÂ {
+0 ! +/†vrowsur gl/banä 0  win$ow.Oudmayer > {};  † wMnÙow.Oedlayer.ItemÄ=†bactovy®
+`†"   wIndo>ÖvEmitpErl
+  0  0sifdnw.getSize
+ "  (
+ c}
+
+}†wiÓtow¨$oenction f·c<or{( EvEim‘ter, gEtQi˙e )({
+'ere`stbict';
+
+//`--%-- iElPers -m-, //Zè
+buNction ISEmttXObj(`obj 	${
+  foR"( vAr prd in obj © {
+`†††retqpn0fanse;
+  }
+†`pp0= nul,; #zeturn trte;M}:
+// -%--/---)-----%)-----≠-m-- BCS7 Òu`aort %---m----)-,---)-≠------- //ä
+var docElemCtyle0= doCuedÓtÆDcumeNdELmme,t.sty|e;6a~ tranc}tknProperty = t{peof dcleiSTyle,uraNsiDIon!?= 'strilg' ?  'transition'`∫$'W‰bkiuTransitio&/;*rar ÙransformPropÂrTy ? 4y`eoF dmsElemstyle.|rajÛfor- == 'Útring7 ?
+$ /tr`nsvorm' :(gWebÎitransgorm';
+var 4{ansiti+kÅf$Evmnt!=!{
+ !Cgb{itren”itimo:07}%fkitT˙ajqiwhnEÓd',  dr`nsition:!'tbancitio.Õd'}[ transmtilnProperty ];
+*/+ b!she!ald vendor rrorMpTieS 4Ía| cmtl! have ve~dor prew)z
+var fefdosPpoperties = {
+  tralsbnrm∫ tÚansformPVopertY,
+ !transi4aon:qdr·lsmtyonPÚ>tgrv˘,™ ÄtscNsmv+on∆uration:%trafsitÈkfPpope2ti ´"'Deration&,  |ran_m6ionProp%rtπ: trans)tikn\sOxerpy + 'Pperty',-
+"0t”qfsktkonTÂlay: transiviooPripurÙy"+ 'D%lay'
+}3≠ä'/∞----)-≠---------,-m------m AÙem -,-=---≠--/,---==-≠©/- //M
+function$Item(`elementl lÂyout$9!;  hf  !Â,emen‰ ) { 0  raturl;…  ]
+
+  thic.elemen4 9 emeomnt9-
+0†/Ø®pqÚejd(lay?54(class,†i.Â* Ma{onr{, Csotnpg, or Pack%"y
+  dh)s+la9out = ,ayowt
+" tHic.poshtibn`= {
+   `yz 2<
+    y; 4]
+ 0}?
+
+( \his._c2Gate();ä
+
+//·inherhT0EvEmitter
+var prkto =$ItmmnurotOty0u$= Object.cR%ate( E6DmItver.arototy e i:
+0zot.‚ofs4puctor < Item;
+
+p2otoÆ[breae = fu~#tioj,9!{ (/ trAnqitiol†objes`s
+ !this._|ransn =`{
+""  ingrn2drtie3: {˝4J !,0cleaO: {},
+ !  onEjd∫!{}
+  };ç  thks.cssh{*   `to3htin( '!bcoÏuteß
+ !});
+}ª
+/- tri&gev 3peCifieD lanfler for!uveNt0typw
+xrto.han‰leEvgNt = fqnktion( Avent")({
+(0rar0method0= #on'†+2%rent.typd?
+  if (®Tlic[ Ìethod ] ©`qç
+`  !thiÛ[ muthkd ]l evenu i;ç*  ˝ç
 };
 
-// ----- getQueryElement ----- //
-
-// use element as selector string
-utils.getQueryElement = function( elem ) {
-  if ( typeof elem == 'string' ) {
-    return document.querySelector( elem );
-  }
-  return elem;
+qsnto.ÁetS)ze(=0fuNktin(( {  vhi{.Saze ="getSize® th)s.%lemen‘$)+
 };
 
-// ----- handleEvent ----- //
+-**
+ " applx ¬[S qt{les un`dltmeÓt * `uqrpm {bject} st9Le
+ *+
+prntn.ccs= fuj3tion(dstYle ) {" ˆar(elemSe˘le =`thHs.eleedÓp.sty|e;
+M
+" fkr ( vCr prp in style ) {
+"0a$// usg vgldor rropErti"id!`vail!ble
+  (Ävar c5p0obt%D@zoq"- vandmzPropor‰È%s[!p2/p ù || pro ;
+$p! alemRUYle_ supb?rtedProp \ = styld[ prop ];ä" u
+|+
 
-// enable .ontype to trigger from .addEventListener( elem, 'type' )
-utils.handleEvent = function( event ) {
-  var method = 'on' + event.type;
-  if ( this[ method ] ) {
-    this[ method ]( event );
-  }
-};
-
-// ----- filterFindElements ----- //
-
-utils.filterFindElements = function( elems, selector ) {
-  // make array of elems
-  elems = utils.makeArray( elems );
-  var ffElems = [];
-
-  elems.forEach( function( elem ) {
-    // check that elem is an actual element
-    if ( !( elem instanceof HTMLElement ) ) {
-      return;
-    }
-    // add elem if no selector
-    if ( !selector ) {
-      ffElems.push( elem );
-      return;
-    }
-    // filter & find items if we have a selector
-    // filter
-    if ( matchesSelector( elem, selector ) ) {
-      ffElems.push( elem );
-    }
-    // find children
-    var childElems = elem.querySelectorAll( selector );
-    // concat childElems to filterFound array
-    for ( var i=0; i < childElems.length; i++ ) {
-      ffElems.push( childElems[i] );
-    }
-  });
-
-  return ffElems;
-};
-
-// ----- debounceMethod ----- //
-
-utils.debounceMethod = function( _class, methodName, threshold ) {
-  threshold = threshold || 100;
-  // original method
-  var method = _class.prototype[ methodName ];
-  var timeoutName = methodName + 'Timeout';
-
-  _class.prototype[ methodName ] = function() {
-    var timeout = this[ timeoutName ];
-    clearTimeout( timeout );
-
-    var args = arguments;
-    var _this = this;
-    this[ timeoutName ] = setTimeout( function() {
-      method.apply( _this, args );
-      delete _this[ timeoutName ];
-    }, threshold );
-  };
-};
-
-// ----- docReady ----- //
-
-utils.docReady = function( callback ) {
-  var readyState = document.readyState;
-  if ( readyState == 'complete' || readyState == 'interactive' ) {
-    // do async to allow for other scripts to run. metafizzy/flickity#441
-    setTimeout( callback );
-  } else {
-    document.addEventListener( 'DOMContentLoaded', callback );
-  }
-};
-
-// ----- htmlInit ----- //
-
-// http://jamesroberts.name/blog/2010/02/22/string-functions-for-javascript-trim-to-camel-case-to-dashed-and-to-underscore/
-utils.toDashed = function( str ) {
-  return str.replace( /(.)([A-Z])/g, function( match, $1, $2 ) {
-    return $1 + '-' + $2;
-  }).toLowerCase();
-};
-
-var console = window.console;
-/**
- * allow user to initialize classes via [data-namespace] or .js-namespace class
- * htmlInit( Widget, 'widgetName' )
- * options are parsed from data-namespace-options
- */
-utils.htmlInit = function( WidgetClass, namespace ) {
-  utils.docReady( function() {
-    var dashedNamespace = utils.toDashed( namespace );
-    var dataAttr = 'data-' + dashedNamespace;
-    var dataAttrElems = document.querySelectorAll( '[' + dataAttr + ']' );
-    var jsDashElems = document.querySelectorAll( '.js-' + dashedNamespace );
-    var elems = utils.makeArray( dataAttrElems )
-      .concat( utils.makeArray( jsDashElems ) );
-    var dataOptionsAttr = dataAttr + '-options';
-    var jQuery = window.jQuery;
-
-    elems.forEach( function( elem ) {
-      var attr = elem.getAttribute( dataAttr ) ||
-        elem.getAttribute( dataOptionsAttr );
-      var options;
-      try {
-        options = attr && JSON.parse( attr );
-      } catch ( error ) {
-        // log error, do not initialize
-        if ( console ) {
-          console.error( 'Error parsing ' + dataAttr + ' on ' + elem.className +
-          ': ' + error );
-        }
-        return;
-      }
-      // initialize
-      var instance = new WidgetClass( elem, options );
-      // make available via $().data('namespace')
-      if ( jQuery ) {
-        jQuery.data( elem, namespace, instance );
-      }
-    });
-
-  });
-};
-
-// -----  ----- //
-
-return utils;
-
-}));
-
-/**
- * Outlayer Item
- */
-
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */ /* globals define, module, require */
-  if ( typeof define == 'function' && define.amd ) {
-    // AMD - RequireJS
-    define( 'outlayer/item',[
-        'ev-emitter/ev-emitter',
-        'get-size/get-size'
-      ],
-      factory
-    );
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS - Browserify, Webpack
-    module.exports = factory(
-      require('ev-emitter'),
-      require('get-size')
-    );
-  } else {
-    // browser global
-    window.Outlayer = {};
-    window.Outlayer.Item = factory(
-      window.EvEmitter,
-      window.getSize
-    );
-  }
-
-}( window, function factory( EvEmitter, getSize ) {
-'use strict';
-
-// ----- helpers ----- //
-
-function isEmptyObj( obj ) {
-  for ( var prop in obj ) {
-    return false;
-  }
-  prop = null;
-  return true;
-}
-
-// -------------------------- CSS3 support -------------------------- //
-
-
-var docElemStyle = document.documentElement.style;
-
-var transitionProperty = typeof docElemStyle.transition == 'string' ?
-  'transition' : 'WebkitTransition';
-var transformProperty = typeof docElemStyle.transform == 'string' ?
-  'transform' : 'WebkitTransform';
-
-var transitionEndEvent = {
-  WebkitTransition: 'webkitTransitionEnd',
-  transition: 'transitionend'
-}[ transitionProperty ];
-
-// cache all vendor properties that could have vendor prefix
-var vendorProperties = {
-  transform: transformProperty,
-  transition: transitionProperty,
-  transitionDuration: transitionProperty + 'Duration',
-  transitionProperty: transitionProperty + 'Property',
-  transitionDelay: transitionProperty + 'Delay'
-};
-
-// -------------------------- Item -------------------------- //
-
-function Item( element, layout ) {
-  if ( !element ) {
-    return;
-  }
-
-  this.element = element;
-  // parent layout class, i.e. Masonry, Isotope, or Packery
-  this.layout = layout;
-  this.position = {
-    x: 0,
-    y: 0
-  };
-
-  this._create();
-}
-
-// inherit EvEmitter
-var proto = Item.prototype = Object.create( EvEmitter.prototype );
-proto.constructor = Item;
-
-proto._create = function() {
-  // transition objects
-  this._transn = {
-    ingProperties: {},
-    clean: {},
-    onEnd: {}
-  };
-
-  this.css({
-    position: 'absolute'
-  });
-};
-
-// trigger specified handler for event type
-proto.handleEvent = function( event ) {
-  var method = 'on' + event.type;
-  if ( this[ method ] ) {
-    this[ method ]( event );
-  }
-};
-
-proto.getSize = function() {
-  this.size = getSize( this.element );
-};
-
-/**
- * apply CSS styles to element
- * @param {Object} style
- */
-proto.css = function( style ) {
-  var elemStyle = this.element.style;
-
-  for ( var prop in style ) {
-    // use vendor property if available
-    var supportedProp = vendorProperties[ prop ] || prop;
-    elemStyle[ supportedProp ] = style[ prop ];
-  }
-};
-
- // measure position, and sets it
-proto.getPosition = function() {
-  var style = getComputedStyle( this.element );
-  var isOriginLeft = this.layout._getOption('originLeft');
-  var isOriginTop = this.layout._getOption('originTop');
-  var xValue = style[ isOriginLeft ? 'left' : 'right' ];
-  var yValue = style[ isOriginTop ? 'top' : 'bottom' ];
-  var x = parseFloat( xValue );
-  var y = parseFloat( yValue );
-  // convert percent to pixels
-  var layoutSize = this.layout.size;
-  if ( xValue.indexOf('%') != -1 ) {
-    x = ( x / 100 ) * layoutSize.width;
-  }
-  if ( yValue.indexOf('%') != -1 ) {
-    y = ( y / 100 ) * layoutSize.height;
-  }
-  // clean up 'auto' or other non-integer values
-  x = isNaN( x ) ? 0 : x;
-  y = isNaN( y ) ? 0 : y;
-  // remove padding from measurement
-  x -= isOriginLeft ? layoutSize.paddingLeft : layoutSize.paddingRight;
-  y -= isOriginTop ? layoutSize.paddingTop : layoutSize.paddingBottom;
-
-  this.position.x = x;
-  this.position.y = y;
-};
-
-// set settled position, apply padding
-proto.layoutPosition = function() {
-  var layoutSize = this.layout.size;
-  var style = {};
-  var isOriginLeft = this.layout._getOption('originLeft');
-  var isOriginTop = this.layout._getOption('originTop');
+ /o Me„wure po„itioN, and sut3 it
+xrot.geuPnWition = &u.c4iog(- {
+  >aR st{lL(= fetC}puÙ%tSuyni( txis.elemEnt0m+  var iwObigAÓLuft$= uhiS.nayout._gedO21imd('nri'ifLeft'	+` ~Ar isOsÈcinTop <$u`I{.lay/uu*_getoption'riw)nTÔp');
+  >`r!xVal5e Ω sty(e[ isOr)gk.Lef|®? 'left7 8 gri'hu7 ]3J 0vcr yVaLae =(St}le_ krraganPop ? ß0Ôp' : 'cot4om7 ];M
+ †v!r0x"=pcrwu^load( xFalUe ):*  var y! pcrr%l/a4( yVahuE );
+  -+!cNver~`percen| to (8alsä !v`v layoutSize = thys.mayout.size;
+  mf (0xVa‰u%.in`exOF(#-ß)0!= %1 ) {Z    ¯ = ( 8 / 100 ) *"hayoutSÈzu.width;
+`"}0$if`("yVALue/iodexOf('%Á	0!=0-± )0{
+    y = (8y$/ 10  9 ™ ,aYoutÉize.ËeigHu;* 2}	
+  // clean 4p gcudo&"ordo|hgr nkÓ-ijue'er$v·l}esJ" x = ksNeN, x ) ? 3 :"x;* "q = hsN·N  {†)†7 0 8 y;†p-/`zemove tcd$ing`from†meawreme~d
+ `x -= isOsiwmnMefv0? lA9oe¸Size.p!dDiNÁLÂfd :!l`yoqtSize.pAddkngRkwht; ! Y -9"isOpcgiLTÔq ? d`yoU|SIZe.p¡ddiÊgT{p08 layou4Si{e.pad‰a|oBottom;
+ä †tËis.Positmoj.x = x;, !thiÛ.psiÙyon.y } Y;I}?ä// 3et se4vled%posiuk/n, axply p!,dyng
+protÔ.l¡{/utoriuion 5 Fuoction() {M
+  vaR l`youtRizm =0thÈs.Ïiyoup,size;  rar"sty,E = {}
+  vis as«rig)o,eft†= 4his.|a9out._getNpdkmn)'orxGHnebtß);	
+  vcP I{OvigilTop  this&le˘outÆ_ga4Optin('oriGhnT/p'){
 
   // x
-  var xPadding = isOriginLeft ? 'paddingLeft' : 'paddingRight';
-  var xProperty = isOriginLeft ? 'left' : 'right';
-  var xResetProperty = isOriginLeft ? 'right' : 'left';
+( vAr(xPadlmnf = isOrigËnLeft  PqddÈlgLEft' : %paddikg“ight';
+  6cr xPROperty = iSrieineft!?$'Left/!: 'rigxt'k-
+"!var`x“e{%tQrorerty = msNriginL%ftt? %pifhˆ' :(%lefv£;M
 
-  var x = this.position.x + layoutSize[ xPadding ];
-  // set in percentage or pixels
-  style[ xProperty ] = this.getXValue( x );
-  // reset other property
-  style[ xResetProperty ] = '';
+† vaÚ x ? dxis.pksithon.z + layutSyzm[ xÒAdLing ];
+  //†Ûet an qevcentaf% ob pixelq
+†style[ xXbopmrty`] π2t`hr.getXValue  |%(;
+ (// sdsew oTher pÚopeÚtx
+"cxyle{ xResetPr/pertY ] = '';
 
-  // y
-  var yPadding = isOriginTop ? 'paddingTop' : 'paddingBottom';
-  var yProperty = isOriginTop ? 'top' : 'bottom';
-  var yResetProperty = isOriginTop ? 'bottom' : 'top';
+  /+$y
+ $fas q–adeing u%iqOpygInD/p$ª†'pqddyngTop' ;†'paudIngBo4tgh7;
+  pir iPrnperty`=†isr-ÁinTop  'top'`:`&bo|toÌß:" var iRusÂtXropdrpy = irOriginPo†?‡/bo4tjm' : 'top&:J
+$ vav y =!dhic.pmsiti+l.yd´ leyouÙSa:e[!9Patding ];*  // sed in ersehT%ge`or!pixels
+  style yPro0erty †=†this.ge4YVqlue) y);ä` // reset nthdr pro0erty
+  stYLe[ yResgtPrmrerdy`]$= ''6
 
-  var y = this.position.y + layoutSize[ yPadding ];
-  // set in percentage or pixels
-  style[ yProperty ] = this.getYValue( y );
-  // reset other property
-  style[ yResetProperty ] = '';
+! this.css, style )3	
+ (4hys.emitEvenp† ¶Ïayou4'. [ uHis ]();};
+proto™gutXV·lue = dujjtimo( x#( {
+" vAr )7Hnraxo:Ù·l = this,layouu.OgetKpthon)7horizon4al')3M
+0 Etuso thisøÏcyoıt+op6yons.peRcefÙPosition!6& `isHory:ont·l ;
+ `$ (†,!x /!thÈr.lAx/ut.sizu>wilvh )`J!∞1p1)†+ '%'0∫ h(+0'px?
+}+
 
-  this.css( style );
-  this.emitEvent( 'layout', [ this ] );
+pÚntˇ.oet…^·muE u nuncti/n*by$)0{	
+  var"asHoriznt`l`=†thhsla}out.ﬂg%tM0tiÌ.(ghkri˙oÓÙal'=;
+ !re6ufn0thxs.laQout.oqtyoÓs.perceltposivkon0&& hrHnrÎ~ontal$? († h0h y / this.la}o}¥.q)re&heiwht$)0*†180 + + #' : y  '0x#ª};
+pro|oÆ/transitiknTo = gtncÙh/N( |, y!) {
+ "vhis.gmtPo3ityon()8 `// geu currEnt x!& y frol top/left
+  ver curL 9 thhÛ.p/sithon.yª-
+  v!r cvrY =&this.4owiÙioo.{;
+K  va"†fidNotMore = | == Thisnporiukkn.x &" y ==0hkS¨`osit)Nn.Y+
+
+ !// saˆ%$en`0poqityÔÓ
+  thh3.umpPoaIuion((z, } );*
+  // if did!noT mnVe(qnl!.Np transit9onkog, jusd$go rg laYnut*  if ∏$difFotM.ve &&†!thmsfisTr!nsm|ioJ)ng ) ;
+  !!t`)s.layowtPo{i|iOg;
+(`  sEuurn3Ö
+  }
+  &ar,trenwX = | - ctrX;  var†tsanÛYh q4- curY;Z( var|Ryns)thojStila(< [=;
+  T2an1idio~[talu.dransform  uhis.geÙTrqnslaÙe( tr)nsX. tr`jcY )ª
+ä" his.transitiÔn {
+"  "to: transi4mojStyde]
+`p  nnTÚun{)tiolnd: {M* !  " tR!nSfory: |(islayou~Position#  ` }, 0  irCleaniOg: pr5Â  }!;}:j+prnto.getTra~slate = functign($x,%y 9†{$ //†blip coorh`inctes mf orÈmin ok"z)g8t!or bkutn-
+( ˆ!r()sOriGinNeft = thiÛ>la]kup.OgetOtvion'obieiÊMeft'-;
+  f¡r hsOrigantop = this.laqout.get_rti+N®oviginTo');L (8†=isœ`ÈvinDeft`? x`9 -x:
+` y = K{McychnTo` ? y :d-y;"0retero guÚeÓwl!te3d('0k x + %rx,‡' + y ;0/px- 0)';};
+
+//"non tRcnsYtiol + pvansdorm support
+pr't.goTo  fe~ctionh ¯l y ) {
+0$th)s,q%TP/sidign($|, y =;
+ †this*|ayoqvPnyotion()N}+
+	
+prodo.moveTc ? xroto.ﬂtp!~sÈpinl\o;
+
+prodo.cetxEskˆÈ/n = ~unction™@x"y ) {
+$`vhis.pgs)tion,X(= parQıFloat( x );  T`isÆposiuion.y(= parseF,i`T( y ):
 };
-
-proto.getXValue = function( x ) {
-  var isHorizontal = this.layout._getOption('horizontal');
-  return this.layout.options.percentPosition && !isHorizontal ?
-    ( ( x / this.layout.size.width ) * 100 ) + '%' : x + 'px';
-};
-
-proto.getYValue = function( y ) {
-  var isHorizontal = this.layout._getOption('horizontal');
-  return this.layout.options.percentPosition && isHorizontal ?
-    ( ( y / this.layout.size.height ) * 100 ) + '%' : y + 'px';
-};
-
-proto._transitionTo = function( x, y ) {
-  this.getPosition();
-  // get current x & y from top/left
-  var curX = this.position.x;
-  var curY = this.position.y;
-
-  var didNotMove = x == this.position.x && y == this.position.y;
-
-  // save end position
-  this.setPosition( x, y );
-
-  // if did not move and not transitioning, just go to layout
-  if ( didNotMove && !this.isTransitioning ) {
-    this.layoutPosition();
-    return;
-  }
-
-  var transX = x - curX;
-  var transY = y - curY;
-  var transitionStyle = {};
-  transitionStyle.transform = this.getTranslate( transX, transY );
-
-  this.transition({
-    to: transitionStyle,
-    onTransitionEnd: {
-      transform: this.layoutPosition
-    },
-    isCleaning: true
-  });
-};
-
-proto.getTranslate = function( x, y ) {
-  // flip cooridinates if origin on right or bottom
-  var isOriginLeft = this.layout._getOption('originLeft');
-  var isOriginTop = this.layout._getOption('originTop');
-  x = isOriginLeft ? x : -x;
-  y = isOriginTop ? y : -y;
-  return 'translate3d(' + x + 'px, ' + y + 'px, 0)';
-};
-
-// non transition + transform support
-proto.goTo = function( x, y ) {
-  this.setPosition( x, y );
-  this.layoutPosition();
-};
-
-proto.moveTo = proto._transitionTo;
-
-proto.setPosition = function( x, y ) {
-  this.position.x = parseFloat( x );
-  this.position.y = parseFloat( y );
-};
-
-// ----- transition ----- //
-
-/**
- * @param {Object} style - CSS
- * @param {Function} onTransitionEnd
+M
+/o)--%- Ùr¡nsivioN(,,-)- //çä/+*-+ o @pA‚am ;œBje„t} wt˘ld %!CBQ
+!*!@p!rAm ˚Func¥mon}`onTransiteofAÓ‰
  */
+	/Ø0Óon tRaoskpInj4 Íust tr)gg%j0#·tlbaco
+prodO.Wn/fPrqnR)tiof0= gufaqion( asgs") {
+$ 4hic&css( )rgs/Ùo );
+‡ if ( args/isBleanmje )0[
+  " T(ir._semOveSt˘,as((argq.p/ );
+ a}
+ ‡fnr ( var `rp kn arcÛ.oÔTrAlsitionEnt0© {M
+"  ·rc3>onPrajbi4ionEnd[ prop ].call("PhiW (;
+ !}
+=;J
+/*j-é *ÄpropeR trinwmui/n
+ :!@paral {ObkE„4| argÛ - aRg5lents
+`*  "@∞!r!m{_Bje„t} to - s4yle eo trAnsitiof e-
+ * ` @param$yGgjÌc|} frnm - st9ma!tO$stert transytiyn!dromä *   @`areM {BOoleaf} icCmeAnhfe - reiveS transiti/n suY,es after tsqnsytion
+`*   @araÌ {Fqnc|ion}†ÔlT0an3itionE~d % ca,lbakc
+ :/
+proto.dransitign =†functi/~(!a2'c i†;
+  oo redireBp†to nknTaFs!timo if2vo0trknsition derat)o*
+  if§( !parsAFmoat dhis.la…outÆopti/nq.dvansithenDusatinn ) )"{ç
+ $  thi{._nonTr·ÓiukOn( qrgs +?ç*   0Eu}rnª
+0"}
 
-// non transition, just trigger callback
-proto._nonTransition = function( args ) {
-  this.css( args.to );
-  if ( args.isCleaning ) {
-    this._removeStyles( args.to );
-  }
-  for ( var prop in args.onTransitionEnd ) {
-    args.onTransitionEnd[ prop ].call( this );
-  }
-};
+  v·r OtransKtion <$4His._tbansn3  //9keet0|Ú`ck%of nnTRansitionEje calnrack jy0cÛs proPgstY
+  for ! ˆar psop in(abfc>onrqnrItio~EnÁ†) ;
+   0OtÚins)tikn.onEfdS `ro‡_$= irws.ÔnîSaÓ#ieionMnd qrnp _;*  Ç  / kEmp`tr`#k`of propertiEs that$are tranraeioning
+$(for ( prop¢in(arg3.po ) s
+    _trafsivlonÆngTropÂrties[ trop(] = drg·ö    //`keup vrac{ of"prk0e0ties tk 'lÂ!n u`†when uransition is dgne   `if $aRgshÛCmeanifg )0˚     !_tRc~3(t)n*cl„°n[0pzop"] = 4rueõ
+ 0  }
+  }M
 
-/**
- * proper transition
- * @param {Object} args - arguments
- *   @param {Object} to - style to transition to
- *   @param {Object} from - style to start transition from
- *   @param {Boolean} isCleaning - removes transition styles after transition
- *   @param {Function} onTransitionEnd - callback
- */
-proto.transition = function( args ) {
-  // redirect to nonTransition if no transition duration
-  if ( !parseFloat( this.layout.options.transitionDuration ) ) {
-    this._nonTransition( args );
-    return;
-  }
-
-  var _transition = this._transn;
-  // keep track of onTransitionEnd callback by css property
-  for ( var prop in args.onTransitionEnd ) {
-    _transition.onEnd[ prop ] = args.onTransitionEnd[ prop ];
-  }
-  // keep track of properties that are transitioning
-  for ( prop in args.to ) {
-    _transition.ingProperties[ prop ] = true;
-    // keep track of properties to clean up when transition is done
-    if ( args.isCleaning ) {
-      _transition.clean[ prop ] = true;
-    }
-  }
-
-  // set from styles
-  if ( args.from ) {
-    this.css( args.from );
-    // force redraw. http://blog.alexmaccaw.com/css-transitions
-    var h = this.element.offsetHeight;
-    // hack for JSHint to hush about unused var
-    h = null;
-  }
-  // enable transition
-  this.enableTransition( args.to );
+  // Ûef froM†st}lesM
+" in ( irgs.Êrmm ) [M`   thhs.cÛs( qrgs.ffom 	3    // foÚce re$raÂ.`http:/blog.aldmqbcAw.com.ssS-trCnsitikns
+  ( fa2 Ë =0Thys.elemenq.offsetHeigh4
+    /- hakk fgr JXhou t."jush abitt u~wsee8?ar8   H < null
+$†=ç ∞// enabme dpansiti{n
+ 1Ù`Ir*e~ibderansition( args.to );
   // set styles that are transitioning
   this.css( args.to );
 
