@@ -43,3 +43,10 @@ This project is licensed under the [License Name](LICENSE) - See the [LICENSE](L
 ## Acknowledgments
 
 Mention any contributors, libraries, or resources that inspired or helped your project.
+
+## Follow Janin on YouTube
+
+If this project helped you, please follow and subscribe:
+
+- **Study with Janin**: [youtube.com/@studywithjanin](https://www.youtube.com/@studywithjanin)
+- **Pomodoro Study with Janin**: [youtube.com/@pomodorostudywithjanin3326](https://www.youtube.com/@pomodorostudywithjanin3326)
